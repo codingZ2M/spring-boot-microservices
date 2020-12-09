@@ -1,0 +1,11 @@
+package com.purplewisteria.cards.data;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface CardRepository extends CrudRepository<CardEntity, Long> {
+	
+	CardEntity findByCheckingAccountId(String checkingAccountId);
+	
+	List <CardEntity> findAllByCheckingAccountId (String checkingAccountId);
+
+}
